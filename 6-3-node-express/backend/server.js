@@ -2,11 +2,11 @@
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
-
 // TODO 1: Define server port
 const app = express();
 const PORT = 3000;
 // TODO 4: Import and Apply CORS middleware
+app.use(cors());
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
