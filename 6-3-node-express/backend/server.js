@@ -14,6 +14,14 @@ app.use(cors());
 
 app.use(morgan("dev"));
 
+app.get("/",(req,res)=>{
+    res.send("Done");
+})
+
+app.get("/api/quote",(req,res)=>{
+    const quote = getRandomQuote();
+    res.json({quote});
+})
 
 
 app.listen(PORT, () => {
